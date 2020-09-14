@@ -52,7 +52,7 @@ function renderUI(fullHours, fullMinutes, fullSeconds, DayName, MonthName, fullD
     MonthD.innerHTML = MonthNames[MonthName];
     DayD.innerHTML = fullDate;
     YearD.innerHTML = Year;
-    TimingD.innerHTML=Timing.toUpperCase();
+    TimingD.innerHTML=Format.isFormat ? Timing.toUpperCase() : null;
 
 
 }
