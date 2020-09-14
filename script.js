@@ -8,7 +8,7 @@ const YearD =document.querySelector("#year");
 const TimingD=document.querySelector("#timing");
 
 const Format={
-    isFormat:false
+    isFormat:true
 }
 
 const DayNames=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
