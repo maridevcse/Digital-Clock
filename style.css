@@ -1,0 +1,141 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+html{
+
+    font-size: 62.5%;
+    box-sizing: inherit;
+    background-image: linear-gradient(to right ,#200122,#6f0000);
+    color: #fff;
+
+}
+.container{
+
+    font-size: 15rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  
+}
+
+.day{
+    font-size: 3.5rem;
+    display: flex;
+}
+
+.month_and_year{
+    margin-left: 1rem ;
+}
+
+#timing{
+    font-size: 3rem;
+}
+button{
+    padding:  15px 30px;
+    border-radius: 100px;
+    border:none;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+button:focus{
+
+    outline: none;
+}
+button:active{
+    animation: topDown .2s;
+}
+
+
+@media only screen and (max-width:830px){
+
+    .container{
+        font-size:13rem;
+    }
+
+    button{
+
+        padding:  15px 25px;
+        margin-top: 1.3rem;
+        font-size: 1.5rem;
+       
+    }
+
+}
+
+@media only screen and (max-width:700px){
+
+    .container{
+        font-size:10rem;
+    }
+    .day{
+        font-size: 2rem;
+    }
+    #timing{
+        font-size: 2rem;
+    }
+
+
+}
+
+@media only screen and (max-width:520px){
+
+    .container{
+        font-size:7.5rem;
+    }
+
+    #timing{
+        font-size: 1.2rem;
+    }
+
+
+    
+
+}
+
+@media only screen and (max-width:400px){
+
+    .container{
+        font-size:5rem;
+    }
+
+}
+
+@media only screen and (max-width:300px){
+
+    .container{
+        font-size:3rem;
+    }
+
+    button{
+
+        padding:  10px 15px;
+        margin-top: 1rem;
+        font-size: 1rem;
+       
+    }
+
+
+}
+
+#title{
+   
+    justify-self: flex-start;
+    justify-content: flex-start;
+}
+
+@keyframes topDown{
+    50%{
+        transform: translateY(7px);
+    }
+    100%{
+        transform: none;
+    }
+}
