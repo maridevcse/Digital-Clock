@@ -34,7 +34,7 @@ function getDate() {
     const MonthName = Day.getMonth();
     const Year = Day.getFullYear();
     const temp=Format.isFormat ? -12 : null;
-    const Hours = Day.getHours() +temp + "";
+    const Hours = Day.getHours() <= 12 ? Day.getHours()+"" :Day.getHours() +temp + "";
     const fullHours = Hours.length < 2 ? "0" + Hours : Hours;
     const Minute = Day.getMinutes() + "";
     const fullMinutes = Minute.length < 2 ? "0" + Minute : Minute;
@@ -52,7 +52,7 @@ function renderUI(fullHours, fullMinutes, fullSeconds, DayName, MonthName, fullD
     MonthD.innerHTML = MonthNames[MonthName];
     DayD.innerHTML = fullDate;
     YearD.innerHTML = Year;
-    TimingD.innerHTML=Timing.toUpperCase();
+    TimingD.innerHTML=Format.isFormat ? Timing.toUpperCase():null;
 
 
 }
